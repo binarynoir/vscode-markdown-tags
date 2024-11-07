@@ -63,6 +63,8 @@ Available supported tags: **todo**, **planned**, **in-progress**, **doing**, **d
 
 For each tag, the following colors are available: **grey**, **green**, **yellow**, **orange**, **blue**, **purple**, **red**.
 
+[See Examples Markdown Documents](/examples/)
+
 ### Tag Examples
 
 #### TODO
