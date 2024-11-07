@@ -173,6 +173,10 @@ MIT License
 
 If you encounter any issues or have questions, please open an issue on [GitHub](https://github.com/binarynoir/markdown-tag/issues).
 
----
+## Author
 
-**Enjoy enhanced styling for your Markdown documents with Markdown Tags!** Transform your plain text notes with visual tags that bring clarity, color, and customization.
+John Smith III
+
+## Acknowledgments
+
+Thanks to all contributors and users for their support and feedback.
