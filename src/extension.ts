@@ -63,20 +63,10 @@ function generateTagSpan(label: string, bgcolor?: string, fgcolor?: string, arro
 /**
  * Markdown-it plugin that processes custom tag syntax in Markdown files and replaces it with styled HTML spans.
  * @param md - The Markdown-it instance to extend.
- * @param cssPath - The path to the CSS file used for styling.
  */
-function tagsPlugin(md: MarkdownIt, cssPath: string): void {
+function tagsPlugin(md: MarkdownIt): void {
     const defaultRender = md.renderer.rules.text;
     let cssContent = '';
-
-    // Load CSS content from specified path, with error handling
-    try {
-        cssContent = fs.readFileSync(cssPath, 'utf-8');
-        outputChannel.appendLine(`CSS loaded successfully from: ${cssPath}`);
-    } catch (error) {
-        outputChannel.appendLine(`Error loading CSS file: ${(error as Error).message}`);
-        vscode.window.showErrorMessage('Could not load CSS file for tag styling. Ensure the file path is correct.');
-    }
 
     // Extend Markdown-it text renderer to process custom tag syntax
     md.renderer.rules.text = (tokens, idx, options, env, self) => {
@@ -109,7 +99,6 @@ function tagsPlugin(md: MarkdownIt, cssPath: string): void {
  * @returns An object containing the extended Markdown-it instance with the custom plugin.
  */
 export function activate(context: vscode.ExtensionContext) {
-    const cssPath = path.join(context.extensionPath, 'style.css');
 
     outputChannel.appendLine('Activating markdown-tag extension.');
 
@@ -118,7 +107,7 @@ export function activate(context: vscode.ExtensionContext) {
             outputChannel.appendLine('Extending Markdown-It with tagsPlugin function.');
             md.set({ html: true });
             md.use((mdInstance: MarkdownIt) => {
-                tagsPlugin(mdInstance, cssPath);
+                tagsPlugin(mdInstance);
             });
             return md;
         }
