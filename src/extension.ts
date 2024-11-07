@@ -111,7 +111,7 @@ function tagsPlugin(md: MarkdownIt, cssPath: string): void {
 export function activate(context: vscode.ExtensionContext) {
     const cssPath = path.join(context.extensionPath, 'style.css');
 
-    outputChannel.appendLine('Activating markdown-tags extension.');
+    outputChannel.appendLine('Activating markdown-tag extension.');
 
     return {
         extendMarkdownIt(md: MarkdownIt) {
