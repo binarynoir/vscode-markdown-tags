@@ -1,4 +1,4 @@
-# Markdown Tags: Enhanced Tag Styling for Markdown
+# <img src="icon.png" alt="Markdown Tags Icon" width="50" height="50"> Markdown Tags: Enhanced Tag Styling for Markdown
 
 Add visual flair to your Markdown documents with custom tag styles! **Markdown Tags** lets you highlight and style labels within Markdown using intuitive syntax, customizable colors, and optional arrow indicators—all in the native Visual Studio Code preview.
 
