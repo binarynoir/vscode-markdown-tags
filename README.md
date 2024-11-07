@@ -78,7 +78,7 @@ The extension defaults to `grey` when invalid colors are detected to ensure a co
 
 ## Contributing
 
-Feel free to submit issues, feature requests, or contribute code on [GitHub](https://github.com/your-repo-link).
+Feel free to submit issues, feature requests, or contribute code on [GitHub](https://github.com/kryptonianson/markdown-tags).
 
 ## License
 
@@ -88,7 +88,7 @@ MIT License
 
 ## Support
 
-If you encounter any issues or have questions, please open an issue on [GitHub](https://github.com/your-repo-link/issues).
+If you encounter any issues or have questions, please open an issue on [GitHub](https://github.com/kryptonianson/markdown-tags/issues).
 
 ---
 
