@@ -1,7 +1,7 @@
 {
 	"name": "markdown-tags",
-	"displayName": "markdown-tags",
-	"description": "nothing yet",
+	"displayName": "Markdown Tags",
+	"description": "Enhance your Markdown documents with custom tag styling. Add predefined or custom labels, customizable colors, and arrow indicators to visually track tasks and statuses in the native VS Code preview.",
 	"version": "0.0.1",
 	"engines": {
 		"vscode": "^1.95.0"
@@ -10,8 +10,7 @@
 		"Other"
 	],
 	"activationEvents": [
-		"onLanguage:markdown",
-		"onCommand:markdown-tags.preview"
+		"onLanguage:markdown"
 	],
 	"main": "./dist/extension.js",
 	"contributes": {
