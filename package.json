@@ -1,11 +1,13 @@
 {
-	"name": "markdown-tags",
+	"name": "markdown-tag",
 	"displayName": "Markdown Tags",
 	"description": "Enhance your Markdown documents with custom tag styling. Add predefined or custom labels, customizable colors, and arrow indicators to visually track tasks and statuses in the native VS Code preview.",
 	"version": "0.0.1",
+	"license": "MIT",
+	"publisher": "BinaryNoir",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/binarynoir/markdown-tags"
+		"url": "https://github.com/binarynoir/markdown-tag"
 	},
 	"engines": {
 		"vscode": "^1.95.0"
@@ -21,7 +23,7 @@
 		"markdown.markdownItPlugins": true,
 		"commands": [
 			{
-				"command": "markdown-tags.preview",
+				"command": "markdown-tag.preview",
 				"title": "Show Markdown Tags Preview"
 			}
 		],
