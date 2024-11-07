@@ -1,0 +1,59 @@
+{
+	"name": "markdown-tags",
+	"displayName": "markdown-tags",
+	"description": "nothing yet",
+	"version": "0.0.1",
+	"engines": {
+		"vscode": "^1.95.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onLanguage:markdown",
+		"onCommand:markdown-tags.preview"
+	],
+	"main": "./dist/extension.js",
+	"contributes": {
+		"markdown.markdownItPlugins": true,
+		"commands": [
+			{
+				"command": "markdown-tags.preview",
+				"title": "Show Markdown Tags Preview"
+			}
+		],
+		"markdown.previewStyles": [
+			"./dist/style.css"
+		],
+		"markdown.previewScripts": [
+			"./dist/extension.js"
+		]
+	},
+	"scripts": {
+		"clean": "rimraf dist/* out/*",
+		"vscode:prepublish": "npm run package",
+		"compile": "webpack",
+		"watch": "webpack --watch",
+		"package": "webpack --mode production --devtool hidden-source-map",
+		"pretest": "npm run clean && npm run compile-tests && npm run compile && npm run lint",
+		"lint": "eslint src"
+	},
+	"devDependencies": {
+		"@types/markdown-it": "^14.1.2",
+		"@types/mocha": "^10.0.9",
+		"@types/node": "20.x",
+		"@types/vscode": "^1.95.0",
+		"@typescript-eslint/eslint-plugin": "^8.10.0",
+		"@typescript-eslint/parser": "^8.7.0",
+		"@vscode/test-cli": "^0.0.10",
+		"@vscode/test-electron": "^2.4.1",
+		"copy-webpack-plugin": "^12.0.2",
+		"eslint": "^9.13.0",
+		"markdown-it": "^14.1.0",
+		"rimraf": "^5.0.0",
+		"ts-loader": "^9.5.1",
+		"typescript": "^5.6.3",
+		"webpack": "^5.95.0",
+		"webpack-cli": "^5.1.4"
+	}
+}
