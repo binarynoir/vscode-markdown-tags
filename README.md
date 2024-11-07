@@ -1,19 +1,10 @@
-# <img src="icon.png" alt="Markdown Tags Icon" width="50" height="50"> Markdown Tags: Enhanced Tag Styling for Markdown
+# Markdown Tags: Enhanced Tag Styling for Markdown
 
-Add visual flair to your Markdown documents with custom tag styles! **Markdown Tags** lets you highlight and style labels within Markdown using intuitive syntax, customizable colors, and optional arrow indicators—all in the native Visual Studio Code preview.
+Add visual flair to your Markdown documents with custom tag styles! **Markdown Tags** lets you highlight and style labels within Markdown using simple syntax, customizable colors, and optional arrow indicators—all in the native Visual Studio Code preview.
 
 ## Features
 
 ### 🎨 Styled Tags
-
-Effortlessly add tags with various styles to convey status or priority in your notes, docs, and project files.
-
-- **Built-in Labels**: Predefined labels for common statuses, such as `todo`, `in-progress`, `done`, `error`, and more.
-- **Custom Labels**: Create any label you need with customizable colors and styling.
-
-### 🎯 Arrowed Tags
-
-Add arrow indicators to tags for even more clarity in task lists or progress tracking.
 
 ### 🖌️ Customizable Colors
 
@@ -40,7 +31,7 @@ Choose from predefined colors (`grey`, `green`, `orange`, etc.) or use custom he
 
 1. **Install** the extension from the Visual Studio Code Marketplace.
 2. **Add Tags** in your Markdown files using the syntax below.
-3. **Open Preview** (Right-click the Markdown file → "Open Preview" or `Ctrl+Shift+V`) to view styled tags in action.
+3. **Open Preview** (Right-click the Markdown file → "Open Preview" or `Ctrl+Shift+V` on Windows or `Cmd+Shift+V` on macOS) to view styled tags in action.
 
 ### Basic Syntax Examples
 
@@ -61,6 +52,96 @@ Choose from predefined colors (`grey`, `green`, `orange`, etc.) or use custom he
 ```markdown
 [[tag|background|#ff4500]] [[tag|foreground||#ff6347]] [[tag|both colors|#32cd32|#ffffff]]
 ```
+
+---
+
+## Tags and Colors
+
+Available supported tags: **todo**, **planned**, **in-progress**, **doing**, **done**, **tip**,
+**on-hold**, **tbd**, **proposed**, **draft**, **wip**, **mvp**,
+**blocked**, **canceled**, **error**, **warning**, **warn**
+
+For each tag, the following colors are available: **grey**, **green**, **yellow**, **orange**, **blue**, **purple**, **red**.
+
+### Tag Examples
+
+#### TODO
+
+- `[[tag|todo|grey]]`
+- `[[tag|todo|green]]`
+- `[[tag|todo|yellow]]`
+- `[[tag|todo|orange]]`
+- `[[tag|todo|blue]]`
+- `[[tag|todo|purple]]`
+- `[[tag|todo|red]]`
+
+#### PLANNED
+
+- `[[tag|planned|grey]]`
+- `[[tag|planned|green]]`
+- `[[tag|planned|yellow]]`
+- `[[tag|planned|orange]]`
+- `[[tag|planned|blue]]`
+- `[[tag|planned|purple]]`
+- `[[tag|planned|red]]`
+
+#### IN-PROGRESS
+
+- `[[tag|in-progress|grey]]`
+- `[[tag|in-progress|green]]`
+- `[[tag|in-progress|yellow]]`
+- `[[tag|in-progress|orange]]`
+- `[[tag|in-progress|blue]]`
+- `[[tag|in-progress|purple]]`
+- `[[tag|in-progress|red]]`
+
+#### DOING
+
+- `[[tag|doing|grey]]`
+- `[[tag|doing|green]]`
+- `[[tag|doing|yellow]]`
+- `[[tag|doing|orange]]`
+- `[[tag|doing|blue]]`
+- `[[tag|doing|purple]]`
+- `[[tag|doing|red]]`
+
+#### DONE
+
+- `[[tag|done|grey]]`
+- `[[tag|done|green]]`
+- `[[tag|done|yellow]]`
+- `[[tag|done|orange]]`
+- `[[tag|done|blue]]`
+- `[[tag|done|purple]]`
+- `[[tag|done|red]]`
+
+#### TIP
+
+- `[[tag|tip|grey]]`
+- `[[tag|tip|green]]`
+- `[[tag|tip|yellow]]`
+- `[[tag|tip|orange]]`
+- `[[tag|tip|blue]]`
+- `[[tag|tip|purple]]`
+- `[[tag|tip|red]]`
+
+... _(repeat as necessary for remaining tags: on-hold, tbd, proposed, draft, mvp, etc.)_
+
+---
+
+### With Arrow (using `[[<tag|label|bgcolor]]`)
+
+#### MVP
+
+- `[[<tag|mvp|grey]]`
+- `[[<tag|mvp|green]]`
+- `[[<tag|mvp|yellow]]`
+- `[[<tag|mvp|orange]]`
+- `[[<tag|mvp|blue]]`
+- `[[<tag|mvp|purple]]`
+- `[[<tag|mvp|red]]`
+
+... _(repeat as necessary for remaining tags: on-hold, tbd, proposed, draft, mvp, etc.)_
 
 ---
 

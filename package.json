@@ -2,7 +2,7 @@
 	"name": "markdown-tag",
 	"displayName": "Markdown Tags",
 	"description": "Enhance your Markdown documents with custom tag styling. Add predefined or custom labels, customizable colors, and arrow indicators to visually track tasks and statuses in the native VS Code preview.",
-	"version": "0.0.2",
+	"version": "0.0.3",
 	"icon": "icon.png",
 	"license": "MIT",
 	"publisher": "BinaryNoir",
@@ -41,7 +41,12 @@
 		"compile": "webpack",
 		"watch": "webpack --watch",
 		"package": "webpack --mode production --devtool hidden-source-map",
-		"lint": "eslint src"
+		"lint": "eslint src",
+		"prebuild": "npm run clean && npm run lint",
+		"build": "npm run compile && npm run package",
+		"prepublish": "npm run build",
+		"publish": "vsce package && vsce publish",
+		"postpublish": "echo 'Publishing complete!'"
 	},
 	"devDependencies": {
 		"@types/markdown-it": "^14.1.2",
