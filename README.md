@@ -34,7 +34,20 @@ Choose from predefined colors (`grey`, `green`, `orange`, etc.) or use custom he
 
 ## Getting Started
 
-1. **Install** the extension from the Visual Studio Code Marketplace.
+1. **Install the Extension**:
+
+   - **From Visual Studio Code**:
+
+     1. Open Visual Studio Code.
+     2. Go to the Extensions view by clicking on the Extensions icon in the Activity Bar on the side of the window or by pressing `Ctrl+Shift+X` (Windows/Linux) or `Cmd+Shift+X` (macOS).
+     3. Search for `Markdown Tags`.
+     4. Click on the `Install` button.
+
+   - **From the Visual Studio Code Marketplace**:
+     1. Visit [Markdown Tags on Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=BinaryNoir.vscode-markdown-tags).
+     2. Click on the `Install` button.
+     3. Follow the prompts to complete the installation in Visual Studio Code.
+
 2. **Add Tags** in your Markdown files using the syntax below.
 3. **Open Preview** (Right-click the Markdown file → "Open Preview" or `Ctrl+Shift+V` on Windows or `Cmd+Shift+V` on macOS) to view styled tags in action.
 
