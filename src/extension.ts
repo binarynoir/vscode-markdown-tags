@@ -14,8 +14,8 @@ const labelMap = [
 ];
 const colorMap = ["grey", "green", "yellow", "orange", "blue", "purple", "red"];
 
-// Regular expression to match custom tag syntax like [[tag|label|bgcolor|fgcolor]]
-const tagSyntaxRegex = /\[\[<?tag\|(?<label>[^\]|]+)(?:\|(?<bgcolor>[^\]|]*))?(?:\|(?<fgcolor>[^\]|]*))?\]\]/g;
+// Regular expression to match custom tag syntax like ((tag|label|bgcolor|fgcolor))
+const tagSyntaxRegex = /\(\(<?tag\|(?<label>[^\)|]+)(?:\|(?<bgcolor>[^\)|]*))?(?:\|(?<fgcolor>[^\)|]*))?\)\)/g;
 
 /**
  * Determines if a given string is a valid hexadecimal color.
@@ -52,7 +52,7 @@ function generateTagSpan(label: string, bgcolor?: string, fgcolor?: string, arro
     const bgCustomColor = bgcolor && isValidHexColor(bgcolor) ? bgcolor : null;
     const fgCustomColor = fgcolor && isValidHexColor(fgcolor) ? fgcolor : null;
 
-    const combinedClasses = `tags ${labelClass} ${bgColorClass} ${arrow ? 'arrow-tags' : ''}`.trim();
+    const combinedClasses = `bn-tags ${labelClass} ${bgColorClass} ${arrow ? 'bn-arrow-tags' : ''}`.trim();
     const style = bgCustomColor || fgCustomColor
         ? `style="${bgCustomColor ? `background-color: ${bgCustomColor};` : ''}${fgCustomColor ? ` color: ${fgCustomColor};` : ''}"`
         : '';
@@ -78,7 +78,7 @@ function tagsPlugin(md: MarkdownIt): void {
                 const escapedLabel = escapeHtml(label);
                 const validBgColor = bgcolor && isValidColor(bgcolor) ? bgcolor : '';
                 const validFgColor = fgcolor && isValidColor(fgcolor) ? fgcolor : '';
-                const arrow = match.startsWith('[[<');
+                const arrow = match.startsWith('((<');
 
                 return generateTagSpan(escapedLabel, validBgColor, validFgColor, arrow);
             });
