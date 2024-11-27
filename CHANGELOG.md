@@ -7,9 +7,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+- none
+
+## [1.1.1] - 2024-11-27
+
 ### Added
 
 - Installation instructions to README.md
+
+### Changed
+
+- Arrow tag styling is now matches normal pill tags in size
 
 ## [1.1.0] - 2024-11-15
 
