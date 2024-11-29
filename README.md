@@ -1,4 +1,4 @@
-# Tags for Markdown: Enhanced Styled Labels for for VS Code
+# Tags for Markdown: Enhanced Styled Labels for VS Code
 
 Add visual flair to your Markdown documents with custom tag styles! **Tags for Markdown** lets you highlight and style labels within Markdown documents using simple syntax, customizable colors, and optional arrow indicators—all in the native Visual Studio Code preview. If you like **Tags for Markdown**, get our plugin for [Obsidian](https://github.com/binarynoir/obsidian-markdown-tags)!
 
