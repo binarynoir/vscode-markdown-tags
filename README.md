@@ -1,4 +1,4 @@
-# Markdown Tags: Enhanced Tag Styling for VS Code
+# Tags for Markdown: Enhanced Tag Styling for VS Code
 
 Add visual flair to your Markdown documents with custom tag styles! **Markdown Tags** lets you highlight and style labels within Markdown using simple syntax, customizable colors, and optional arrow indicators—all in the native Visual Studio Code preview.
 
