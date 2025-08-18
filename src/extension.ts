@@ -14,8 +14,9 @@ const labelMap = [
 ];
 const colorMap = ["grey", "green", "yellow", "orange", "blue", "purple", "red"];
 
-// Regular expression to match custom tag syntax like ((tag|label|bgcolor|fgcolor))
-const tagSyntaxRegex = /\(\(<?tag\|(?<label>[^\)|]+)(?:\|(?<bgcolor>[^\)|]*))?(?:\|(?<fgcolor>[^\)|]*))?\)\)/g;
+// Regular expression to match custom tag syntax like ((tag|label|bgcolor|fgcolor)) or ((tag/label/bgcolor/fgcolor))
+// Supports both | and / as separators
+const tagSyntaxRegex = /\(\(<?tag(?:[\|\/])(?<label>[^\|\/\)]+)(?:[\|\/](?<bgcolor>[^\|\/\)]*))?(?:[\|\/](?<fgcolor>[^\|\/\)]*))?\)\)/g;
 
 /**
  * Determines if a given string is a valid hexadecimal color.

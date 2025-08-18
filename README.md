@@ -18,13 +18,17 @@ Use predefined colors or specify custom hex codes for both background and foregr
 
 ### 📄 Flexible Syntax
 
-Simple, flexible syntax options:
+Simple, flexible syntax options (use either `|` or `/` as the separator):
 
 ```markdown
 ((tag|label))
+((tag/label))
 ((tag|label|background-color))
+((tag/label/background-color))
 ((tag|label|background-color|foreground-color))
+((tag/label/background-color/foreground-color))
 ((<tag|label)) <!-- Adds an arrow to the left -->
+((<tag/label)) <!-- Adds an arrow to the left -->
 ```
 
 ### 🌈 Supports a Variety of Colors
@@ -57,19 +61,19 @@ Choose from predefined colors (`grey`, `green`, `orange`, etc.) or use custom he
 #### Status Tags
 
 ```markdown
-((tag|todo)) ((tag|in-progress|#ffcc00)) ((tag|done|#28a745|#ffffff))
+((tag|todo)) ((tag/in-progress/#ffcc00)) ((tag|done|#28a745|#ffffff))
 ```
 
 #### Arrowed Tags
 
 ```markdown
-((<tag|planned)) ((<tag|custom test))
+((<tag|planned)) ((<tag/custom test))
 ```
 
 #### Customizing Colors
 
 ```markdown
-((tag|background|#ff4500)) ((tag|foreground||#ff6347)) ((tag|both colors|#32cd32|#ffffff))
+((tag|background|#ff4500)) ((tag/foreground//#ff6347)) ((tag|both colors|#32cd32|#ffffff))
 ```
 
 ---
@@ -88,63 +92,63 @@ For each tag, the following colors are available: **grey**, **green**, **yellow*
 
 #### TODO
 
-- `((tag|todo|grey))`
-- `((tag|todo|green))`
-- `((tag|todo|yellow))`
-- `((tag|todo|orange))`
-- `((tag|todo|blue))`
-- `((tag|todo|purple))`
-- `((tag|todo|red))`
+- `((tag|todo|grey))` or `((tag/todo/grey))`
+- `((tag|todo|green))` or `((tag/todo/green))`
+- `((tag|todo|yellow))` or `((tag/todo/yellow))`
+- `((tag|todo|orange))` or `((tag/todo/orange))`
+- `((tag|todo|blue))` or `((tag/todo/blue))`
+- `((tag|todo|purple))` or `((tag/todo/purple))`
+- `((tag|todo|red))` or `((tag/todo/red))`
 
 #### PLANNED
 
-- `((tag|planned|grey))`
-- `((tag|planned|green))`
-- `((tag|planned|yellow))`
-- `((tag|planned|orange))`
-- `((tag|planned|blue))`
-- `((tag|planned|purple))`
-- `((tag|planned|red))`
+- `((tag|planned|grey))` or `((tag/planned/grey))`
+- `((tag|planned|green))` or `((tag/planned/green))`
+- `((tag|planned|yellow))` or `((tag/planned/yellow))`
+- `((tag|planned|orange))` or `((tag/planned/orange))`
+- `((tag|planned|blue))` or `((tag/planned/blue))`
+- `((tag|planned|purple))` or `((tag/planned/purple))`
+- `((tag|planned|red))` or `((tag/planned/red))`
 
 #### IN-PROGRESS
 
-- `((tag|in-progress|grey))`
-- `((tag|in-progress|green))`
-- `((tag|in-progress|yellow))`
-- `((tag|in-progress|orange))`
-- `((tag|in-progress|blue))`
-- `((tag|in-progress|purple))`
-- `((tag|in-progress|red))`
+- `((tag|in-progress|grey))` or `((tag/in-progress/grey))`
+- `((tag|in-progress|green))` or `((tag/in-progress/green))`
+- `((tag|in-progress|yellow))` or `((tag/in-progress/yellow))`
+- `((tag|in-progress|orange))` or `((tag/in-progress/orange))`
+- `((tag|in-progress|blue))` or `((tag/in-progress/blue))`
+- `((tag|in-progress|purple))` or `((tag/in-progress/purple))`
+- `((tag|in-progress|red))` or `((tag/in-progress/red))`
 
 #### DOING
 
-- `((tag|doing|grey))`
-- `((tag|doing|green))`
-- `((tag|doing|yellow))`
-- `((tag|doing|orange))`
-- `((tag|doing|blue))`
-- `((tag|doing|purple))`
-- `((tag|doing|red))`
+- `((tag|doing|grey))` or `((tag/doing/grey))`
+- `((tag|doing|green))` or `((tag/doing/green))`
+- `((tag|doing|yellow))` or `((tag/doing/yellow))`
+- `((tag|doing|orange))` or `((tag/doing/orange))`
+- `((tag|doing|blue))` or `((tag/doing/blue))`
+- `((tag|doing|purple))` or `((tag/doing/purple))`
+- `((tag|doing|red))` or `((tag/doing/red))`
 
 #### DONE
 
-- `((tag|done|grey))`
-- `((tag|done|green))`
-- `((tag|done|yellow))`
-- `((tag|done|orange))`
-- `((tag|done|blue))`
-- `((tag|done|purple))`
-- `((tag|done|red))`
+- `((tag|done|grey))` or `((tag/done/grey))`
+- `((tag|done|green))` or `((tag/done/green))`
+- `((tag|done|yellow))` or `((tag/done/yellow))`
+- `((tag|done|orange))` or `((tag/done/orange))`
+- `((tag|done|blue))` or `((tag/done/blue))`
+- `((tag|done|purple))` or `((tag/done/purple))`
+- `((tag|done|red))` or `((tag/done/red))`
 
 #### TIP
 
-- `((tag|tip|grey))`
-- `((tag|tip|green))`
-- `((tag|tip|yellow))`
-- `((tag|tip|orange))`
-- `((tag|tip|blue))`
-- `((tag|tip|purple))`
-- `((tag|tip|red))`
+- `((tag|tip|grey))` or `((tag/tip/grey))`
+- `((tag|tip|green))` or `((tag/tip/green))`
+- `((tag|tip|yellow))` or `((tag/tip/yellow))`
+- `((tag|tip|orange))` or `((tag/tip/orange))`
+- `((tag|tip|blue))` or `((tag/tip/blue))`
+- `((tag|tip|purple))` or `((tag/tip/purple))`
+- `((tag|tip|red))` or `((tag/tip/red))`
 
 ... _(repeat as necessary for remaining tags: on-hold, tbd, proposed, draft, mvp, etc.)_
 
@@ -154,13 +158,13 @@ For each tag, the following colors are available: **grey**, **green**, **yellow*
 
 #### MVP
 
-- `((<tag|mvp|grey))`
-- `((<tag|mvp|green))`
-- `((<tag|mvp|yellow))`
-- `((<tag|mvp|orange))`
-- `((<tag|mvp|blue))`
-- `((<tag|mvp|purple))`
-- `((<tag|mvp|red))`
+- `((<tag|mvp|grey))` or `((<tag/mvp/grey))`
+- `((<tag|mvp|green))` or `((<tag/mvp/green))`
+- `((<tag|mvp|yellow))` or `((<tag/mvp/yellow))`
+- `((<tag|mvp|orange))` or `((<tag/mvp/orange))`
+- `((<tag|mvp|blue))` or `((<tag/mvp/blue))`
+- `((<tag|mvp|purple))` or `((<tag/mvp/purple))`
+- `((<tag|mvp|red))` or `((<tag/mvp/red))`
 
 ... _(repeat as necessary for remaining tags: on-hold, tbd, proposed, draft, mvp, etc.)_
 
