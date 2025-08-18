@@ -7,7 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-- none
+- Added support for both `|` and `/` as separators in tag syntax (e.g., ((tag|label)) and ((tag/label)))
+- Updated documentation and examples to reflect this change
 
 ## [1.1.2] - 2024-12-04
 
