@@ -4,6 +4,8 @@ Add visual flair to your Markdown documents with custom tag styles! **Tags for M
 
 Also available for [VitePress](https://github.com/binarynoir/vitepress-markdown-tags) and [Obsidian](https://github.com/binarynoir/obsidian-markdown-tags).
 
+[Documentation and live demo](https://binarynoir.github.io/plugins/markdown-tags/vscode)
+
 [![Support me on Buy Me a Coffee](https://img.shields.io/badge/Support%20me-Buy%20Me%20a%20Coffee-orange?style=for-the-badge&logo=buy-me-a-coffee)](https://buymeacoffee.com/binarynoir)
 [![Support me on Ko-fi](https://img.shields.io/badge/Support%20me-Ko--fi-blue?style=for-the-badge&logo=ko-fi)](https://ko-fi.com/binarynoir)
 [![Visit my website](https://img.shields.io/badge/Website-binarynoir.tech-8c8c8c?style=for-the-badge)](https://binarynoir.tech)
@@ -35,7 +37,7 @@ Simple, flexible syntax options (use either `|` or `/` as the separator):
 
 ### 🌈 Supports a Variety of Colors
 
-Choose from predefined colors (`grey`, `green`, `orange`, etc.) or use custom hex codes to suit your design preferences.
+Choose from predefined colors (`grey`, `green`, `orange`, etc.) or use custom hex codes to suit your design preferences. Background colors accept a predefined name or a hex code; foreground colors accept hex codes only. Tag labels that contain Markdown emphasis characters such as `*` are split by the parser and will not render as a tag.
 
 ---
 

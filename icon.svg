@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2d3240"/>
+      <stop offset="1" stop-color="#181b24"/>
+    </linearGradient>
+    <linearGradient id="green" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#36a070"/>
+      <stop offset="1" stop-color="#2a7d57"/>
+    </linearGradient>
+    <linearGradient id="blue" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#5588d6"/>
+      <stop offset="1" stop-color="#3d6fb8"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="140%">
+      <feDropShadow dx="0" dy="14" stdDeviation="14" flood-color="#000" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+
+  <rect width="1024" height="1024" rx="224" fill="url(#bg)"/>
+
+  <!-- Pill tag -->
+  <g filter="url(#shadow)">
+    <rect x="150" y="257" width="650" height="230" rx="115" fill="url(#green)"/>
+    <rect x="250" y="352" width="390" height="40" rx="20" fill="#fff" fill-opacity="0.95"/>
+  </g>
+
+  <!-- Arrow tag -->
+  <g filter="url(#shadow)">
+    <path d="M240 652 L366 565 H836 V739 H366 Z" fill="url(#blue)" stroke="url(#blue)" stroke-width="28" stroke-linejoin="round"/>
+    <circle cx="324" cy="652" r="22" fill="#fff"/>
+    <rect x="440" y="632" width="330" height="40" rx="20" fill="#fff" fill-opacity="0.95"/>
+  </g>
+</svg>

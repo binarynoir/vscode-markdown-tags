@@ -7,7 +7,30 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-- none
+## [1.3.1] - 2026-10-08
+
+### Changed
+
+- Add a link to the documentation site in README
+
+## [1.3.0] - 2026-10-06
+
+### Fixed
+
+- Text surrounding a tag is now HTML-escaped (previously it was emitted raw)
+- Custom hex colors now apply to arrow tags
+- An explicit background color now always wins over the label's default color
+- Named foreground colors are no longer accepted (they were validated but had no effect); use hex codes
+- Removed the `markdown.previewScripts` contribution, which loaded the extension-host bundle into the preview
+- Removed the unregistered `markdown-tag.preview` command
+
+### Changed
+
+- Default tag colors darkened to meet WCAG AA contrast; yellow tags use dark text
+- Tag sizes now scale with the preview font size
+- The extension no longer forces `html: true` on the Markdown renderer
+- Added unit tests (`npm test`), stricter TypeScript and ESLint settings, and workspace trust / virtual workspace capabilities
+- Replaced the `publish` script with `release`; removed unused test dev dependencies
 
 ## [1.2.0] - 2025-08-18
 

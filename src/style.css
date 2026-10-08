@@ -1,92 +1,84 @@
+/*
+ * Tag colors are driven by two custom properties so that inline custom colors
+ * (set by the extension as --bn-bg / --bn-fg) also apply to arrow tags:
+ *   --bn-bg  background color (also used for the arrow point)
+ *   --bn-fg  text color
+ * Sizes are expressed in --bn-u, 1/14 of the preview font size, so tags scale with it.
+ * Default (white) text on every default background meets WCAG AA contrast (4.5:1).
+ */
 .bn-tags {
+	--bn-u: calc(1em / 14);
+	--bn-bg: #6e6e6e;
+	--bn-fg: #ffffff;
+
 	display: inline-block;
-	vertical-align: middle !important;
-	font-size: 14px;
+	vertical-align: middle;
+	font-size: 1em;
 	font-weight: 500;
-	height: 20px;
-	line-height: 20px;
-	border-radius: 15px;
-	padding: 0 10px;
-	color: white;
+	height: calc(20 * var(--bn-u));
+	line-height: calc(20 * var(--bn-u));
+	border-radius: calc(15 * var(--bn-u));
+	padding: 0 calc(10 * var(--bn-u));
+	background-color: var(--bn-bg);
+	color: var(--bn-fg);
 	text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 
 	&.bn-arrow-tags {
-		all: unset;
-		all: inherit;
-		display: inline-block;
-		height: 20px;
-		line-height: 20px;
-		right: -6px;
 		position: relative;
-		margin: 0 8px 0 10px;
-		padding: 0 10px 0 12px;
-		border-bottom-left-radius: 2px;
-		border-top-left-radius: 2px;
-		border-bottom-right-radius: 3px;
-		border-top-right-radius: 3px;
+		right: calc(-6 * var(--bn-u));
+		margin: 0 calc(8 * var(--bn-u)) 0 calc(10 * var(--bn-u));
+		padding: 0 calc(10 * var(--bn-u)) 0 calc(12 * var(--bn-u));
+		border-radius: calc(3 * var(--bn-u)) calc(3 * var(--bn-u)) calc(3 * var(--bn-u)) calc(2 * var(--bn-u));
 		box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
-		color: white !important;
-		font-size: 14px;
-		font-weight: 500;
 		text-decoration: none;
-		text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
-		-webkit-text-fill-color: #ffffff !important;
 
 		&:before {
 			content: "";
 			position: absolute;
 			top: 0;
-			left: -11px;
+			left: calc(-11 * var(--bn-u));
 			width: 0;
 			height: 0;
-			border-color: transparent;
-			border-radius: 15%;
 			border-style: solid;
-			border-width: 10px 12px 10px 0;
+			border-color: transparent;
+			border-right-color: var(--bn-bg);
+			border-radius: 15%;
+			border-width: calc(10 * var(--bn-u)) calc(12 * var(--bn-u)) calc(10 * var(--bn-u)) 0;
 		}
 
 		&:after {
 			content: "";
 			position: absolute;
-			top: 7.5px;
-			left: 0.5px;
-			float: left;
-			width: 5px;
-			height: 5px;
+			top: calc(7.5 * var(--bn-u));
+			left: calc(0.5 * var(--bn-u));
+			width: calc(5 * var(--bn-u));
+			height: calc(5 * var(--bn-u));
 			border-radius: 50%;
 			background: white;
 			box-shadow: -1px -1px 2px rgba(0, 0, 0, 0.4);
 		}
 	}
 
+	&.bn-upper {
+		text-transform: uppercase;
+	}
+
 	&.todo,
 	&.planned,
 	&.grey {
-		background-color: #6e6e6e;
-
-		&:before {
-			border-right-color: #6e6e6e;
-		}
+		--bn-bg: #6e6e6e;
 	}
 
 	&.doing,
 	&.in-progress,
 	&.orange {
-		background-color: #ff7f00;
-
-		&:before {
-			border-right-color: #ff7f00;
-		}
+		--bn-bg: #b84f00;
 	}
 
 	&.done,
 	&.tip,
 	&.green {
-		background-color: #42b983;
-
-		&:before {
-			border-right-color: #42b983;
-		}
+		--bn-bg: #2a7d57;
 	}
 
 	&.on-hold,
@@ -95,51 +87,31 @@
 	&.proposed,
 	&.draft,
 	&.blue {
-		background-color: #7aa0dd;
-
-		&:before {
-			border-right-color: #7aa0dd;
-		}
+		--bn-bg: #3d6fb8;
 	}
 
 	&.mvp,
 	&.purple {
-		background-color: #7a5add;
-
-		&:before {
-			border-right-color: #7a5add;
-		}
+		--bn-bg: #6a4acb;
 	}
 
+	/* Yellow is too light for white text */
 	&.warn,
 	&.warning,
 	&.yellow {
-		background-color: #e7c000;
-
-		&:before {
-			border-right-color: #e7c000;
-		}
-	}
-
-	&.tbd,
-	&.mvp,
-	&.wip,
-	&.draft {
-		text-transform: uppercase;
+		--bn-bg: #e7c000;
+		--bn-fg: #1f1f1f;
+		text-shadow: none;
 	}
 
 	&.blocked,
 	&.canceled,
 	&.error,
 	&.red {
-		background-color: #da5961;
-
-		&:before {
-			border-right-color: #da5961;
-		}
+		--bn-bg: #c0353d;
 	}
 
 	& + & {
-		margin-left: 5px;
+		margin-left: calc(5 * var(--bn-u));
 	}
 }
