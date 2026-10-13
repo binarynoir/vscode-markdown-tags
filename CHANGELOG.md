@@ -7,11 +7,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-## [1.3.1] - 2026-10-08
+## [1.3.1] - 2026-10-13
 
 ### Changed
 
 - Add a link to the documentation site in README
+- README: add a Feedback and support section with links to report a bug, request a feature, or browse open issues
+- README: add a More from BinaryNoir section with the BinaryNoir logo and links to the other plugins and command-line tools on [binarynoir.github.io](https://binarynoir.github.io)
+- README: add a binarynoir.github.io badge
+
+### Fixed
+
+- README: issue and contribution links pointed at the old `markdown-tag` repository
 
 ## [1.3.0] - 2026-10-06
 
