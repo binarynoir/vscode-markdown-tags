@@ -10,12 +10,12 @@ updates:
     ignore:
       # typescript-eslint peers on typescript <6.1.0; lift when it supports newer
       - dependency-name: typescript
-        versions: [">=6.1.0"]
+        versions: ['>=6.1.0']
       # must not exceed engines.vscode, or vsce refuses to package
-      - dependency-name: "@types/vscode"
+      - dependency-name: '@types/vscode'
       # v15's CJS typings import ESM types without resolution-mode, breaking module Node16
       - dependency-name: markdown-it
-        versions: [">=15.0.0"]
+        versions: ['>=15.0.0']
   - package-ecosystem: github-actions
     directory: /
     schedule:

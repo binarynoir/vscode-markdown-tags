@@ -1,0 +1,15 @@
+{
+    "singleQuote": true,
+    "tabWidth": 4,
+    "printWidth": 120,
+    "overrides": [
+        {
+            "files": ["package.json"],
+            "options": { "useTabs": true }
+        },
+        {
+            "files": ["*.yml", "*.yaml", "*.md"],
+            "options": { "tabWidth": 2 }
+        }
+    ]
+}

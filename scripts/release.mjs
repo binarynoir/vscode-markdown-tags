@@ -95,6 +95,7 @@ if (unreleasedBody) {
 }
 
 run('npm run lint');
+run('npm run format:check');
 run('npm test');
 run('npm run package');
 

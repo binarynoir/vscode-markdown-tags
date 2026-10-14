@@ -2,14 +2,28 @@ import type MarkdownIt from 'markdown-it';
 
 // Labels that have a predefined color in style.css
 const labelMap = [
-    "todo", "planned", "in-progress", "doing", "done", "tip",
-    "on-hold", "tbd", "proposed", "draft", "wip", "mvp",
-    "blocked", "canceled", "error", "warning", "warn"
+    'todo',
+    'planned',
+    'in-progress',
+    'doing',
+    'done',
+    'tip',
+    'on-hold',
+    'tbd',
+    'proposed',
+    'draft',
+    'wip',
+    'mvp',
+    'blocked',
+    'canceled',
+    'error',
+    'warning',
+    'warn',
 ];
-const colorMap = ["grey", "green", "yellow", "orange", "blue", "purple", "red"];
+const colorMap = ['grey', 'green', 'yellow', 'orange', 'blue', 'purple', 'red'];
 
 // Labels rendered in upper case
-const upperCaseLabels = ["tbd", "mvp", "wip", "draft"];
+const upperCaseLabels = ['tbd', 'mvp', 'wip', 'draft'];
 
 // Matches ((tag|label|bgcolor|fgcolor)) or ((tag/label/bgcolor/fgcolor)); a leading ((< makes an arrow tag
 const tagSyntaxRegex = /\(\(<?tag[|/](?<label>[^|/)]+)(?:[|/](?<bgcolor>[^|/)]*))?(?:[|/](?<fgcolor>[^|/)]*))?\)\)/g;
@@ -27,7 +41,10 @@ export const isValidHexColor = (color: string): boolean => /^#([0-9A-Fa-f]{3}){1
  * @returns A string with HTML special characters escaped.
  */
 export const escapeHtml = (str: string): string =>
-    str.replace(/[&<>"']/g, char => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[char] || char));
+    str.replace(
+        /[&<>"']/g,
+        (char) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[char] || char,
+    );
 
 /**
  * Generates the HTML span for a single tag. The label is escaped here, and colors are
@@ -48,7 +65,12 @@ export function generateTagSpan(label: string, bgcolor?: string, fgcolor?: strin
     // An explicit color always wins over the label's default color
     const colorClass = colorMap.includes(lowerBg) ? lowerBg : bgHex ? '' : labelClass || 'grey';
 
-    const classes = ['bn-tags', colorClass, upperCaseLabels.includes(lowerLabel) ? 'bn-upper' : '', arrow ? 'bn-arrow-tags' : '']
+    const classes = [
+        'bn-tags',
+        colorClass,
+        upperCaseLabels.includes(lowerLabel) ? 'bn-upper' : '',
+        arrow ? 'bn-arrow-tags' : '',
+    ]
         .filter(Boolean)
         .join(' ');
 
@@ -71,7 +93,9 @@ export function renderTextWithTags(content: string): string {
     for (const match of content.matchAll(tagSyntaxRegex)) {
         const start = match.index ?? 0;
         const { label, bgcolor, fgcolor } = match.groups ?? {};
-        html += escapeHtml(content.slice(last, start)) + generateTagSpan(label, bgcolor, fgcolor, match[0].startsWith('((<'));
+        html +=
+            escapeHtml(content.slice(last, start)) +
+            generateTagSpan(label, bgcolor, fgcolor, match[0].startsWith('((<'));
         last = start + match[0].length;
     }
 
@@ -84,13 +108,10 @@ export function renderTextWithTags(content: string): string {
  * @param md - The Markdown-it instance to extend.
  */
 export function tagsPlugin(md: MarkdownIt): void {
-    const defaultRender = md.renderer.rules.text
-        ?? ((tokens, idx) => escapeHtml(tokens[idx].content));
+    const defaultRender = md.renderer.rules.text ?? ((tokens, idx) => escapeHtml(tokens[idx].content));
 
     md.renderer.rules.text = (tokens, idx, options, env, self) => {
         const content = tokens[idx].content;
-        return content.includes('((')
-            ? renderTextWithTags(content)
-            : defaultRender(tokens, idx, options, env, self);
+        return content.includes('((') ? renderTextWithTags(content) : defaultRender(tokens, idx, options, env, self);
     };
 }

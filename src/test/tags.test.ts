@@ -25,7 +25,7 @@ test('upper-case labels keep the bn-upper class even with an explicit color', ()
 test('hex colors are passed as CSS variables, including for arrow tags', () => {
     assert.equal(
         render('((<tag|next|#ff4500|#fff))'),
-        '<p><span class="bn-tags bn-arrow-tags" style="--bn-bg: #ff4500; --bn-fg: #fff">next</span></p>'
+        '<p><span class="bn-tags bn-arrow-tags" style="--bn-bg: #ff4500; --bn-fg: #fff">next</span></p>',
     );
 });
 

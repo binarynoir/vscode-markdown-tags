@@ -7,111 +7,111 @@
  * Default (white) text on every default background meets WCAG AA contrast (4.5:1).
  */
 .bn-tags {
-	--bn-u: calc(1em / 14);
-	--bn-bg: #6e6e6e;
-	--bn-fg: #ffffff;
+    --bn-u: calc(1em / 14);
+    --bn-bg: #6e6e6e;
+    --bn-fg: #ffffff;
 
-	display: inline-block;
-	vertical-align: middle;
-	font-size: 1em;
-	font-weight: 500;
-	height: calc(20 * var(--bn-u));
-	line-height: calc(20 * var(--bn-u));
-	border-radius: calc(15 * var(--bn-u));
-	padding: 0 calc(10 * var(--bn-u));
-	background-color: var(--bn-bg);
-	color: var(--bn-fg);
-	text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 1em;
+    font-weight: 500;
+    height: calc(20 * var(--bn-u));
+    line-height: calc(20 * var(--bn-u));
+    border-radius: calc(15 * var(--bn-u));
+    padding: 0 calc(10 * var(--bn-u));
+    background-color: var(--bn-bg);
+    color: var(--bn-fg);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 
-	&.bn-arrow-tags {
-		position: relative;
-		right: calc(-6 * var(--bn-u));
-		margin: 0 calc(8 * var(--bn-u)) 0 calc(10 * var(--bn-u));
-		padding: 0 calc(10 * var(--bn-u)) 0 calc(12 * var(--bn-u));
-		border-radius: calc(3 * var(--bn-u)) calc(3 * var(--bn-u)) calc(3 * var(--bn-u)) calc(2 * var(--bn-u));
-		box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
-		text-decoration: none;
+    &.bn-arrow-tags {
+        position: relative;
+        right: calc(-6 * var(--bn-u));
+        margin: 0 calc(8 * var(--bn-u)) 0 calc(10 * var(--bn-u));
+        padding: 0 calc(10 * var(--bn-u)) 0 calc(12 * var(--bn-u));
+        border-radius: calc(3 * var(--bn-u)) calc(3 * var(--bn-u)) calc(3 * var(--bn-u)) calc(2 * var(--bn-u));
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+        text-decoration: none;
 
-		&:before {
-			content: "";
-			position: absolute;
-			top: 0;
-			left: calc(-11 * var(--bn-u));
-			width: 0;
-			height: 0;
-			border-style: solid;
-			border-color: transparent;
-			border-right-color: var(--bn-bg);
-			border-radius: 15%;
-			border-width: calc(10 * var(--bn-u)) calc(12 * var(--bn-u)) calc(10 * var(--bn-u)) 0;
-		}
+        &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: calc(-11 * var(--bn-u));
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-color: transparent;
+            border-right-color: var(--bn-bg);
+            border-radius: 15%;
+            border-width: calc(10 * var(--bn-u)) calc(12 * var(--bn-u)) calc(10 * var(--bn-u)) 0;
+        }
 
-		&:after {
-			content: "";
-			position: absolute;
-			top: calc(7.5 * var(--bn-u));
-			left: calc(0.5 * var(--bn-u));
-			width: calc(5 * var(--bn-u));
-			height: calc(5 * var(--bn-u));
-			border-radius: 50%;
-			background: white;
-			box-shadow: -1px -1px 2px rgba(0, 0, 0, 0.4);
-		}
-	}
+        &:after {
+            content: '';
+            position: absolute;
+            top: calc(7.5 * var(--bn-u));
+            left: calc(0.5 * var(--bn-u));
+            width: calc(5 * var(--bn-u));
+            height: calc(5 * var(--bn-u));
+            border-radius: 50%;
+            background: white;
+            box-shadow: -1px -1px 2px rgba(0, 0, 0, 0.4);
+        }
+    }
 
-	&.bn-upper {
-		text-transform: uppercase;
-	}
+    &.bn-upper {
+        text-transform: uppercase;
+    }
 
-	&.todo,
-	&.planned,
-	&.grey {
-		--bn-bg: #6e6e6e;
-	}
+    &.todo,
+    &.planned,
+    &.grey {
+        --bn-bg: #6e6e6e;
+    }
 
-	&.doing,
-	&.in-progress,
-	&.orange {
-		--bn-bg: #b84f00;
-	}
+    &.doing,
+    &.in-progress,
+    &.orange {
+        --bn-bg: #b84f00;
+    }
 
-	&.done,
-	&.tip,
-	&.green {
-		--bn-bg: #2a7d57;
-	}
+    &.done,
+    &.tip,
+    &.green {
+        --bn-bg: #2a7d57;
+    }
 
-	&.on-hold,
-	&.tbd,
-	&.wip,
-	&.proposed,
-	&.draft,
-	&.blue {
-		--bn-bg: #3d6fb8;
-	}
+    &.on-hold,
+    &.tbd,
+    &.wip,
+    &.proposed,
+    &.draft,
+    &.blue {
+        --bn-bg: #3d6fb8;
+    }
 
-	&.mvp,
-	&.purple {
-		--bn-bg: #6a4acb;
-	}
+    &.mvp,
+    &.purple {
+        --bn-bg: #6a4acb;
+    }
 
-	/* Yellow is too light for white text */
-	&.warn,
-	&.warning,
-	&.yellow {
-		--bn-bg: #e7c000;
-		--bn-fg: #1f1f1f;
-		text-shadow: none;
-	}
+    /* Yellow is too light for white text */
+    &.warn,
+    &.warning,
+    &.yellow {
+        --bn-bg: #e7c000;
+        --bn-fg: #1f1f1f;
+        text-shadow: none;
+    }
 
-	&.blocked,
-	&.canceled,
-	&.error,
-	&.red {
-		--bn-bg: #c0353d;
-	}
+    &.blocked,
+    &.canceled,
+    &.error,
+    &.red {
+        --bn-bg: #c0353d;
+    }
 
-	& + & {
-		margin-left: calc(5 * var(--bn-u));
-	}
+    & + & {
+        margin-left: calc(5 * var(--bn-u));
+    }
 }

@@ -18,3 +18,5 @@ examples/**
 screenshot.png
 eslint.config.mjs
 scripts/**
+.prettierrc.json
+.prettierignore
