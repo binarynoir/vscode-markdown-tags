@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 // Bumps the version, tags, and pushes. Pushing the tag triggers
-// .github/workflows/release.yml, which lints, tests, packages the .vsix,
-// publishes it to the VS Code Marketplace, and creates the GitHub release —
-// this script only handles the local half.
+// .github/workflows/release.yml, which lints, tests, packages the .vsix, and
+// creates the GitHub release with the .vsix attached — this script only handles
+// the local half. Upload that .vsix to the Marketplace by hand afterwards.
 import { execSync } from 'node:child_process';
 import { readFileSync, writeFileSync } from 'node:fs';
 
@@ -103,5 +103,8 @@ run(`npm version ${bumpType}`);
 run('git push --follow-tags');
 
 console.log(
-    '\nPushed — the release workflow will now test, package, publish to the Marketplace, and create the GitHub release.',
+    '\nPushed — the release workflow will now test, package, and create the GitHub release with the .vsix attached.',
+);
+console.log(
+    'Then download the .vsix and upload it at https://marketplace.visualstudio.com/manage/publishers/binarynoir',
 );

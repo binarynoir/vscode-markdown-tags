@@ -35,11 +35,6 @@ jobs:
       - name: Package extension
         run: npx vsce package --out "vscode-markdown-tags-${GITHUB_REF_NAME#v}.vsix"
 
-      - name: Publish to VS Code Marketplace
-        run: npx vsce publish --packagePath "vscode-markdown-tags-${GITHUB_REF_NAME#v}.vsix"
-        env:
-          VSCE_PAT: ${{ secrets.VSCE_PAT }}
-
       - name: Create GitHub release
         run: gh release create "$GITHUB_REF_NAME" --title "$GITHUB_REF_NAME" --generate-notes "vscode-markdown-tags-${GITHUB_REF_NAME#v}.vsix"
         env:
