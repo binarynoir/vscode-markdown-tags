@@ -36,7 +36,10 @@
 		"lint": "eslint src",
 		"test": "tsc -p . && node --test \"out/test/**/*.test.js\"",
 		"build": "npm run clean && npm run lint && npm test && npm run package",
-		"release": "vsce publish"
+		"release": "node scripts/release.mjs",
+		"release:patch": "node scripts/release.mjs patch",
+		"release:minor": "node scripts/release.mjs minor",
+		"release:major": "node scripts/release.mjs major"
 	},
 	"devDependencies": {
 		"@eslint/js": "^10.0.1",
