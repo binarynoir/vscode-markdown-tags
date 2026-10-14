@@ -41,7 +41,8 @@
 		"release": "node scripts/release.mjs",
 		"release:patch": "node scripts/release.mjs patch",
 		"release:minor": "node scripts/release.mjs minor",
-		"release:major": "node scripts/release.mjs major"
+		"release:major": "node scripts/release.mjs major",
+		"release:download": "node scripts/download-release.mjs"
 	},
 	"devDependencies": {
 		"@eslint/js": "^10.0.1",

@@ -2,7 +2,8 @@
 // Bumps the version, tags, and pushes. Pushing the tag triggers
 // .github/workflows/release.yml, which lints, tests, packages the .vsix, and
 // creates the GitHub release with the .vsix attached — this script only handles
-// the local half. Upload that .vsix to the Marketplace by hand afterwards.
+// the local half. Afterwards, `npm run release:download` fetches that .vsix for
+// uploading to the Marketplace by hand.
 import { execSync } from 'node:child_process';
 import { readFileSync, writeFileSync } from 'node:fs';
 
@@ -106,5 +107,5 @@ console.log(
     '\nPushed — the release workflow will now test, package, and create the GitHub release with the .vsix attached.',
 );
 console.log(
-    'Then download the .vsix and upload it at https://marketplace.visualstudio.com/manage/publishers/binarynoir',
+    'When it finishes, run `npm run release:download` to fetch the .vsix and open the Marketplace upload page.',
 );
