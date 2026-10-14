@@ -34,7 +34,7 @@
 		"watch-tests": "tsc -p . --watch --noEmit",
 		"package": "webpack --mode production --devtool hidden-source-map",
 		"lint": "eslint src",
-		"test": "tsc -p . && node --test out/test/",
+		"test": "tsc -p . && node --test \"out/test/**/*.test.js\"",
 		"build": "npm run clean && npm run lint && npm test && npm run package",
 		"release": "vsce publish"
 	},
