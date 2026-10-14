@@ -1,5 +1,9 @@
 # Tags for Markdown: Enhanced Styled Labels for VS Code
 
+[![VS Marketplace version](https://vsmarketplacebadges.dev/version/BinaryNoir.vscode-markdown-tags.svg)](https://marketplace.visualstudio.com/items?itemName=BinaryNoir.vscode-markdown-tags)
+[![CI](https://github.com/binarynoir/vscode-markdown-tags/actions/workflows/ci.yml/badge.svg)](https://github.com/binarynoir/vscode-markdown-tags/actions/workflows/ci.yml)
+[![license](https://img.shields.io/github/license/binarynoir/vscode-markdown-tags.svg)](LICENSE)
+
 Add visual flair to your Markdown documents with custom tag styles! **Tags for Markdown** lets you highlight and style labels within Markdown documents using simple syntax, customizable colors, and optional arrow indicators—all in the native Visual Studio Code preview.
 
 Also available for [VitePress](https://github.com/binarynoir/vitepress-markdown-tags) and [Obsidian](https://github.com/binarynoir/obsidian-markdown-tags).
